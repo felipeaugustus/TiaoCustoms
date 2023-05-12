@@ -15,3 +15,32 @@
     background-color: var(--azul-escuro);
     height: 13vh;
 }
+
+aside {
+    background-color: var(--azul-escuro);
+    float: right;
+    width: 35vw;
+    height: 100vh;
+    text-align: center;
+    
+}
+
+h1 {
+    color: var(--branco);
+    margin-top: 10vw;
+    
+
+}
+
+#login {
+    margin-top: 40px;
+    
+
+}
+
+#LabelRemindMe {
+    color: var(--branco);
+    font-size: small;
+}
+
+
