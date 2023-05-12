@@ -19,14 +19,14 @@
         <main>
             <form action="" method="get">
                 <h2>Veículo</h2>
-                <input type="text" name="marca" id="" placeholder="Digite a marca" autofocus><br>
-                <input type="text" name="modelo" id="" placeholder="Digite o modelo" autofocus><br>
-                <input type="text" name="placa" id="" placeholder="Digite a placa" autofocus>
-                <input type="number" name="ano" id="" placeholder="Ano" min="1900" max="2023"><br>
+                <input type="text" name="marca" id="" placeholder="Digite a marca" autofocus required><br>
+                <input type="text" name="modelo" id="" placeholder="Digite o modelo" autofocus required><br>
+                <input type="text" name="placa" id="" placeholder="Digite a placa" autofocus required>
+                <input type="number" name="ano" id="" placeholder="Ano" min="1900" max="2023" required><br>
                 <h2>Serviço</h2>
-                <input type="date" name="dtEntrada" id="" placeholder="Digite a data de entrada">
-                <input type="text" name="orcamento" id="" placeholder="Digite o orçamento"><br>
-                <select name="servicos" id="">
+                <input type="date" name="dtEntrada" id="" placeholder="Digite a data de entrada" required>
+                <input type="text" name="orcamento" id="" placeholder="Digite o orçamento" required><br>
+                <select name="servicos" id="" required>
                     <option value="Eletrica">Eletrica</option>
                     <option value="Mecanica">Mecânica</option>
                     <option value="Latoaria">Latoaria</option>
@@ -35,9 +35,9 @@
                     <option value="Suspensao">Suspensão</option>
                     <option value="Revisao">Revisão</option>
                 </select><br>
-                <input type="text" name="dsServico" id="" placeholder="Digite a descrição do serviço"><br>
-                <input type="submit" value="Limpar">
-                <input type="submit" value="Cadastrar">
+                <textarea name="dsServico" id="" cols="30" rows="10"></textarea><br>
+                <input type="reset" value="Limpar">
+                <button type="button" onclick="alert('Veículo e serviço cadastrados com sucesso!')">Cadastrar</button>
             </form>
         </main>
     </header>
