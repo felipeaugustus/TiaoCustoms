@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,34 @@
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <header>
+        <main>
+            <form action="" method="get">
+                <h2>Veículo</h2>
+                <input type="text" name="marca" id="" placeholder="Digite a marca" autofocus><br>
+                <input type="text" name="modelo" id="" placeholder="Digite o modelo" autofocus><br>
+                <input type="text" name="placa" id="" placeholder="Digite a placa" autofocus>
+                <input type="number" name="ano" id="" placeholder="Ano" min="1900" max="2023"><br>
+                <h2>Serviço</h2>
+                <input type="date" name="dtEntrada" id="" placeholder="Digite a data de entrada">
+                <input type="text" name="orcamento" id="" placeholder="Digite o orçamento"><br>
+                <select name="servicos" id="">
+                    <option value="Eletrica">Eletrica</option>
+                    <option value="Mecanica">Mecânica</option>
+                    <option value="Latoaria">Latoaria</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Estetica">Estética</option>
+                    <option value="Suspensao">Suspensão</option>
+                    <option value="Revisao">Revisão</option>
+                </select><br>
+                <input type="text" name="dsServico" id="" placeholder="Digite a descrição do serviço"><br>
+                <input type="submit" value="Limpar">
+                <input type="submit" value="Cadastrar">
+            </form>
+        </main>
+    </header>
 </body>
+
 </html>
