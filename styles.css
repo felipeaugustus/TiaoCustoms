@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 :root {
@@ -14,4 +15,21 @@
 .header {
     background-color: var(--azul-escuro);
     height: 13vh;
+    padding: 10px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.tiao-img {
+    margin-left: 2.2vw;
+    width: 260px;
+    height: 102px;
 }
