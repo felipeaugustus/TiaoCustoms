@@ -7,7 +7,7 @@
 :root {
     --azul-escuro: #13335b;
     --cinza: #D9D9D9;
-    --azul: #D9D9D9;
+    --azul: #0097B2;
     --branco: #FFFFFF;
     --preto: rgb(20, 20, 20);
 }
@@ -22,6 +22,7 @@
     list-style: none;
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .header a {
