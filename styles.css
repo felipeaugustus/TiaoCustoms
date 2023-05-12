@@ -10,6 +10,7 @@
     --azul: #0097B2;
     --branco: #FFFFFF;
     --preto: rgb(20, 20, 20);
+    --cinza: rgb(170, 169, 169);
 }
 
 .header {
@@ -21,12 +22,26 @@
 .header ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    flex-direction: row;
 }
+
 
 .header a {
     text-decoration: none;
+    color: var(--branco);
+    font-size: 28px;
+    margin-right: 100px;
+    font-weight: 400;
+    padding-bottom: 40px;
+    border-bottom: 5px solid var(--branco);
+}
+
+.navbar-items {
+    margin-top: 25px;
+}
+
+.not-selected {
+    color: var(--cinza) !important;
+    border: none !important;
 }
 
 .tiao-img {
