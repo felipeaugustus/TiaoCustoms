@@ -13,6 +13,11 @@
     --cinza: rgb(170, 169, 169);
 }
 
+@media screen and (min-width: 7000px) {
+    aside {
+        width: 100%;
+    }
+}
 .header {
     background-color: var(--azul-escuro);
     height: 13vh;
@@ -50,32 +55,72 @@
     height: 102px;
 }
 
+
 aside {
     background-color: var(--azul-escuro);
     float: right;
     width: 35vw;
     height: 100vh;
+    min-width: 35vw;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     
+    
+}
+aside a {
+    color: var(--azul);
+}
+aside a:hover {
+    color: #0ab8d6;
 }
 
 h1 {
     color: var(--branco);
-    margin-top: 10vw;
+    margin-top: 13vw;
+    font-size: 38px;
     
-
 }
 
-#login {
-    margin-top: 40px;
-    
 
+#login {
+    margin-top: 10px;
+}
+
+#login button {
+    width: 320px;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 20px;
+    border: none;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#login button:hover {
+    background-color: #0ab8d6;
+}
+
+.loginText {
+    width: 300px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 #LabelRemindMe {
     color: var(--branco);
-    font-size: small;
+    margin-right: 200px;
+    
 }
 
-
+@media only screen and (max-width: 900px) {
+    aside {
+      width: 100%;
+    }
+  }
 
