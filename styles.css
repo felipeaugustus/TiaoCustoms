@@ -13,11 +13,8 @@
     --cinza: rgb(170, 169, 169);
 }
 
-@media screen and (min-width: 7000px) {
-    aside {
-        width: 100%;
-    }
-}
+
+
 
 .background-img img {
     position: fixed;
@@ -140,6 +137,16 @@ aside h1 {
 
 }
 
+figure img{
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 65vw;
+        height: 100vh;
+
+}
+
 
 
 
@@ -171,6 +178,10 @@ footer {
     background-color: var(--azul-escuro);
     color: var(--branco);
     padding: 5px;
+}
+
+.mdc-card {
+    scale: 20%;
 }
 
 @media only screen and (max-width: 900px) {
