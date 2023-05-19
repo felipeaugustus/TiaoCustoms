@@ -309,6 +309,17 @@ aside h1 {
 
 }
 
+.card {
+    
+scale: 70%; 
+width: 976px;
+position: absolute;
+}
+
+.irmaosdacasa {
+    background-color:white;
+}
+
 
 #login {
     margin-top: 10px;
