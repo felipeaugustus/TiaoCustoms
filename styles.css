@@ -142,8 +142,8 @@ figure img{
         left: 0;
         top: 0;
         z-index: -1;
-        width: 65vw;
-        height: 100vh;
+        min-width: 65vw;
+        min-height: 100vh;
 
 }
 
