@@ -59,7 +59,7 @@
 aside {
     background-color: var(--azul-escuro);
     float: right;
-    width: 35vw;
+    width: 385px;
     height: 100vh;
     min-width: 35vw;
     align-items: center;
@@ -74,10 +74,16 @@ aside a {
 aside a:hover {
     color: #0ab8d6;
 }
+aside img {
+    margin-top: 5vh;
+    width: 200px;
+    height: 80px;
+}
 
-h1 {
+
+aside h1 {
     color: var(--branco);
-    margin-top: 13vw;
+    margin-top: 7vh;
     font-size: 38px;
     
 }
