@@ -18,30 +18,45 @@
         width: 100%;
     }
 }
+
+.background-img img {
+    position: fixed;
+    margin-top: -5px;
+    width: 100vw;
+    height: 85vh;
+}
+
+/* Header  */
 .header {
     background-color: var(--azul-escuro);
-    height: 13vh;
-    padding: 10px;
+    height: 12vh;
+    display: inline-block;
+    width: 100vw;
 }
 
-.header ul {
-    list-style: none;
-    display: flex;
-}
 
+nav {
+    width: 100vw;
+    display: inline-block;
+}
 
 .header a {
     text-decoration: none;
     color: var(--branco);
     font-size: 28px;
-    margin-right: 100px;
     font-weight: 400;
-    padding-bottom: 40px;
-    border-bottom: 5px solid var(--branco);
+    padding-bottom: 2.2vh;
+    border-bottom: 3px solid var(--branco);
+}
+
+.header a:hover {
+    color: var(--branco) !important;
 }
 
 .navbar-items {
-    margin-top: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .not-selected {
@@ -50,9 +65,8 @@
 }
 
 .tiao-img {
-    margin-left: 2.2vw;
-    width: 260px;
-    height: 102px;
+    width: 220px;
+    height: 85px;
 }
 
 
@@ -65,15 +79,16 @@ aside {
     align-items: center;
     justify-content: center;
     text-align: center;
-    
-    
 }
+
 aside a {
     color: var(--azul);
 }
+
 aside a:hover {
     color: #0ab8d6;
 }
+
 aside img {
     margin-top: 5vh;
     width: 200px;
@@ -85,7 +100,7 @@ aside h1 {
     color: var(--branco);
     margin-top: 7vh;
     font-size: 38px;
-    
+
 }
 
 
@@ -105,6 +120,7 @@ aside h1 {
     border-radius: 4px;
     cursor: pointer;
 }
+
 #login button:hover {
     background-color: #0ab8d6;
 }
@@ -121,12 +137,44 @@ aside h1 {
 #LabelRemindMe {
     color: var(--branco);
     margin-right: 200px;
-    
+
+}
+
+
+
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user p {
+    font-size: 18px;
+    color: var(--branco);
+    margin-right: 22px;
+}
+
+.user img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 5px;
 }
 
 @media only screen and (max-width: 900px) {
     aside {
-      width: 100%;
+        width: 100%;
     }
-  }
-
+}
