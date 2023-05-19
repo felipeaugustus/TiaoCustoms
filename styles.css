@@ -67,6 +67,68 @@ nav {
 }
 
 
+
+
+
+
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user p {
+    font-size: 18px;
+    color: var(--branco);
+    margin-right: 22px;
+}
+
+.user img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pagina de login */
+
 aside {
     background-color: var(--azul-escuro);
     float: right;
@@ -147,42 +209,26 @@ figure img{
 
 }
 
-
-
-
-.user {
-    display: flex;
-    align-items: center;
-}
-
-.user p {
-    font-size: 18px;
-    color: var(--branco);
-    margin-right: 22px;
-}
-
-.user img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-
-/* Footer */
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    padding: 5px;
-}
-
 .mdc-card {
     scale: 20%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 900px) {
     aside {
