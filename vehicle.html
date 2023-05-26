@@ -15,44 +15,63 @@
 </head>
 
 <body>
-
-    <main>
-
-        <article class="conteiner">
-            <div class="box">
-                <form action="" method="get">
-                    <h2>Veículo</h2>
-                    <input type="text" name="marca" id="marca" placeholder="Marca" autofocus required><br>
-                    <input type="text" name="modelo" id="modelo" placeholder="Modelo" autofocus required><br>
-                    <input type="text" name="placa" id="placa" placeholder="Placa" autofocus required>
-                    <input type="number" name="ano" id="ano" placeholder="Ano" min="1900" max="2023" required><br>
-                    <h2>Serviço</h2>
-
-                    <input type="date" name="dtEntrada" id="dtEntrada" placeholder="Data de Entrada" required>
-
-                    <input type="text" name="orcamento" id="orcamento" placeholder="orçamento" required><br>
-
-                    <label for="servicos">Tipo de serviço</label>
-                    <select name="servicos" id="servicos" required>
-                        <option value="Eletrica">Eletrica</option>
-                        <option value="Mecanica">Mecânica</option>
-                        <option value="Latoaria">Latoaria</option>
-                        <option value="Pintura">Pintura</option>
-                        <option value="Estetica">Estética</option>
-                        <option value="Suspensao">Suspensão</option>
-                        <option value="Revisao">Revisão</option>
-                    </select><br>
-
-                    <textarea name="dsServico" id="dsServico" cols="30" rows="10">Descrição do Serviço</textarea><br>
-                    <div class="button-register-reset">
-                        <input type="reset" value="LIMPAR">
-                        <button type="button" value="">CADASTRAR</button>
-                    </div>
-                </form>
+    <div class="header">
+        <nav>
+            <div class="navbar-items">
+                <a href="index.html"> <img href="index.html" src="imgs/logo.png" alt="Tião Customs logo"
+                        class="tiao-img"></a>
+                <a class="not-selected" href="vehicle-list.html">
+                    SERVIÇOS
+                </a>
+                <a href="vehicle.html">
+                    CADASTRO
+                </a>
+                <a class="not-selected" href="#">
+                    ESTOQUE
+                </a>
+                <a href="#" class="not-selected user">
+                    <p>
+                        GEROMEL
+                    </p>
+                    <img src="imgs/geromel.png" alt="Imagem de usuário">
+                </a>
             </div>
-        </article>
-
-    </main>
+        </nav>
+    </div>
+    <div class="background-img">
+        <img src="imgs/dodge-dart.jpeg" alt="">
+    </div>
+    <article class="conteiner">
+        <div class="box">
+            <form action="" method="get">
+                <h2>Veículo</h2>
+                <input type="text" name="marca" id="marca" placeholder="Marca" autofocus required><br>
+                <input type="text" name="modelo" id="modelo" placeholder="Modelo" autofocus required><br>
+                <input type="text" name="placa" id="placa" placeholder="Placa" autofocus required>
+                <input type="number" name="ano" id="ano" placeholder="Ano" min="1900" max="2023" required><br>
+                <h2>Serviço</h2>
+                <input type="date" name="dtEntrada" id="dtEntrada" placeholder="Data de Entrada" required>
+                <input type="text" name="orcamento" id="orcamento" placeholder="orçamento" required><br>
+                <label for="servicos">Tipo de serviço</label>
+                <select name="servicos" id="servicos" required>
+                    <option value="Eletrica">Eletrica</option>
+                    <option value="Mecanica">Mecânica</option>
+                    <option value="Latoaria">Latoaria</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Estetica">Estética</option>
+                    <option value="Suspensao">Suspensão</option>
+                    <option value="Revisao">Revisão</option>
+                </select><br>
+                <textarea name="dsServico" id="dsServico" cols="30" rows="10">Descrição do Serviço</textarea><br>
+                <div class="button-register-reset">
+                    <input type="reset" value="LIMPAR">
+                    <button type="button" value="">CADASTRAR</button>
+                </div>
+            </form>
+        </div>
+    </article>
+    <footer>Equipe: Felipe Augusto de Carvalho de Araujo, Gustavo Celso Bozzano, Martin Lange de Assis, Nicolas
+        Monteiro Mattos - 2023</footer>
 
 </body>
 

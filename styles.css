@@ -288,20 +288,33 @@ figure img {
 /* VEHICLE */
 
 .conteiner {
-    background-color: var(--azul-escuro);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 128vh;
 }
 
 .box {
+    z-index: 1;
     width: 40%;
     height: 70%;
-    background-color: var(--cinza);
+    background-color: rgba(202, 202, 202, 0.8);
     border-radius: 30px;
     padding: 20px;
     opacity: 1.0;
+    border-radius: 35px;
+    width: 35vw;
+    height: 72vh;
+    margin-bottom: 3.5vh;
+    margin-top: 4vh;
+    background-color: rgba(202, 202, 202, 0.8);
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
+.box h2 {
+    margin-left: 8px;
+    font-weight: 300;
+    font-size: 32px;
 }
 
 #marca,
@@ -323,7 +336,6 @@ textarea {
 
 }
 
-h2,
 label {
     font-weight: normal;
     margin-top: 10px;
