@@ -10,45 +10,50 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/imgs/favicon.png">
     <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <main>
-            <form action="" method="get">
-                <h2>Veículo</h2>
-                <label for="marca">Marca:</label>
-                <input type="text" name="marca" id="marca" placeholder="Digite a marca" autofocus required><br>
-                <label for="modelo">Modelo:</label>
-                <input type="text" name="modelo" id="modelo" placeholder="Digite o modelo" autofocus required><br>
-                <label for="placa">Placa:</label>
-                <input type="text" name="placa" id="placa" placeholder="Digite a placa" autofocus required>
-                <label for="ano">Ano:</label>
-                <input type="number" name="ano" id="ano" placeholder="Ano" min="1900" max="2023" required><br>
-                <h2>Serviço</h2>
-                <label for="dtEntrada">Data de Entrada:</label>
-                <input type="date" name="dtEntrada" id="dtEntrada" placeholder="Digite a data de entrada" required>
-                <label for="orcamento">Orçamento:</label>
-                <input type="text" name="orcamento" id="orcamento" placeholder="Digite o orçamento" required><br>
-                <label for="servicos">Serviço:</label>
-                <select name="servicos" id="servicos" required>
-                    <option value="Eletrica">Eletrica</option>
-                    <option value="Mecanica">Mecânica</option>
-                    <option value="Latoaria">Latoaria</option>
-                    <option value="Pintura">Pintura</option>
-                    <option value="Estetica">Estética</option>
-                    <option value="Suspensao">Suspensão</option>
-                    <option value="Revisao">Revisão</option>
-                </select><br>
-                <label for="dsServico">Descrição do Serviço:</label><br>
-                <textarea name="dsServico" id="dsServico" cols="30" rows="10"></textarea><br>
-                <input type="reset" value="Limpar">
-                <button type="button" onclick="alert('Veículo e serviço cadastrados com sucesso!')">Cadastrar</button>
-            </form>
-        </main>
-    </header>
+
+    <main>
+
+        <article class="conteiner">
+            <div class="box">
+                <form action="" method="get">
+                    <h2>Veículo</h2>
+                    <input type="text" name="marca" id="marca" placeholder="Marca" autofocus required><br>
+                    <input type="text" name="modelo" id="modelo" placeholder="Modelo" autofocus required><br>
+                    <input type="text" name="placa" id="placa" placeholder="Placa" autofocus required>
+                    <input type="number" name="ano" id="ano" placeholder="Ano" min="1900" max="2023" required><br>
+                    <h2>Serviço</h2>
+
+                    <input type="date" name="dtEntrada" id="dtEntrada" placeholder="Data de Entrada" required>
+
+                    <input type="text" name="orcamento" id="orcamento" placeholder="orçamento" required><br>
+
+                    <label for="servicos">Tipo de serviço</label>
+                    <select name="servicos" id="servicos" required>
+                        <option value="Eletrica">Eletrica</option>
+                        <option value="Mecanica">Mecânica</option>
+                        <option value="Latoaria">Latoaria</option>
+                        <option value="Pintura">Pintura</option>
+                        <option value="Estetica">Estética</option>
+                        <option value="Suspensao">Suspensão</option>
+                        <option value="Revisao">Revisão</option>
+                    </select><br>
+
+                    <textarea name="dsServico" id="dsServico" cols="30" rows="10">Descrição do Serviço</textarea><br>
+                    <div class="button-register-reset">
+                        <input type="reset" value="LIMPAR">
+                        <button type="button" value="">CADASTRAR</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+
+    </main>
+
 </body>
 
 </html>
