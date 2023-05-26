@@ -235,3 +235,88 @@ figure img{
         width: 100%;
     }
 }
+
+/*vehicle.html */
+
+.conteiner {
+    background-color: var(--azul-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 128vh;
+}
+
+.box {
+    width: 40%;
+    height: 70%;
+    background-color: var(--cinza);
+    border-radius: 30px;
+    padding: 20px;
+    opacity: 1.0;
+}
+
+#marca,
+#modelo,
+#placa,
+#ano,
+#dtEntrada,
+#orcamento,
+select,
+textarea {
+    width: 94%;
+    margin-left: 10px;
+    padding-top: 5px;
+    padding-right: 2px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: none;
+    margin-bottom: 10px;
+    
+}
+
+h2, label{
+    font-weight: normal;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#placa {
+    width: 47%;
+
+}
+
+#ano {
+    width: 42%;
+    margin-left: 16px;
+}
+
+#dtEntrada {
+    width: 47%;
+}
+
+#orcamento {
+    width: 44%;
+    margin-left: 5px;
+}
+
+.button-register-reset {
+    float: right;
+    display: flex;
+    margin-top: 20px;
+}
+
+.button-register-reset input[type="reset"],
+.button-register-reset button[type="button"] {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.button-register-reset input[type="reset"] {
+    margin-right: 40px;
+}
