@@ -117,6 +117,12 @@ th {
     padding: 10px;
 }
 
+tfoot tr td {
+    border-top: 1px solid;
+    border-bottom: none;
+}
+
+
 .table-footer {
     align-items: center;
     display: flex;
