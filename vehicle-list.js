@@ -12,8 +12,6 @@ class Service {
         this.serviceType = serviceType;
         this.description = description;
         this.client = client;
-        this.save();
-        populateTable()
     }
 
     getPlate() {
@@ -28,11 +26,20 @@ class Service {
         }
     }
 
-    save() {
+    upsert() {
         if (localStorage.getItem(this.getPlate()) != null) {
-            throw new Error("Já existe um serviço cadastrado com essa placa");
+            if (confirm("Um serviço com essa placa já existe, você irá atualiza-lo se prosseguir")) {
+                deleteService(this.getPlate());
+                localStorage.setItem(this.getPlate(), JSON.stringify(this));
+                return true;
+            } else {
+                return false;
+            }
         } else {
+            deleteService(this.getPlate());
             localStorage.setItem(this.getPlate(), JSON.stringify(this));
+            alert("Serviço cadastrado com êxito");
+            return true;
         }
     }
 }
@@ -62,18 +69,8 @@ function deleteService(plate) {
     if (!plateIsValid(plate)) throw new Error("Placa com formatação inválida");
     if (localStorage.getItem(plate) != null) {
         localStorage.removeItem(plate);
-        populateTable();
     } else {
         throw new Error("Não existe um serviço cadastrado com essa placa");
-    }
-}
-
-function updateService(plate, brand, model, year, date, budget, serviceType, description, client) {
-    if (plateIsValid(plate)) {
-        deleteService(plate);
-        new Service(brand, model, plate, year, date, budget, serviceType, description, client);
-    } else {
-        throw new Error("Placa com formatação inválida");
     }
 }
 

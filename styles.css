@@ -25,7 +25,7 @@
 /* Header  */
 .header {
     background-color: var(--azul-escuro);
-    height: 12vh;
+    height: 87px;
     display: inline-block;
     width: 100vw;
 }
