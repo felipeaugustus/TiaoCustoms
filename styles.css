@@ -17,8 +17,9 @@
 .background-img img {
     position: fixed;
     margin-top: -5px;
-    width: 100vw;
-    height: 85vh;
+    min-width: 100vw;
+    min-height: 85vh;
+
 }
 
 /* Header  */
