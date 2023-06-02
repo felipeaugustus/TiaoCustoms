@@ -41,7 +41,20 @@ nav {
     font-size: 28px;
     font-weight: 400;
     /* padding-bottom: 2.2vh; */
+    /* padding-bottom: 2.2vh; */
     border-bottom: 3px solid var(--branco);
+}
+ #cad {
+    padding-bottom: 2.2vh;
+    margin-top: 17px;
+}
+#ser {
+    padding-bottom: 2.2vh;
+    margin-top: 17px;
+} 
+#ESTOQUE {
+   
+    margin-top: 17px;
 }
  #cad {
     padding-bottom: 2.2vh;
@@ -173,6 +186,33 @@ table tbody tr:last-child td {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  
+
+}
+
+
+.submenu-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-content li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
 
 }
 
