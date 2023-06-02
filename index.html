@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Tião Customs</title>
-    <script src="scripts.js"></script>
+    <script type="module" src="login.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/imgs/favicon.png">
+    <link rel="icon" href="imgs/favicon.png">
     <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
@@ -19,14 +19,14 @@
         <h1>LOGIN</h1>
 
         <form action="" method="get" id="login"> 
-        <input type="text" name="user" placeholder="Usuário" class="loginText" required> 
+        <input id="user" type="text" name="user" placeholder="Usuário" class="loginText" required> 
         <br>
-        <input type="password" name="password" required placeholder="Senha" class="loginText"> 
+        <input id="password" type="password" name="password" required placeholder="Senha" class="loginText"> 
         <br>
         <input type="checkbox" name="RemindMe" id="RemindMe">
         <label for="RemindMe" id="LabelRemindMe">Lembrar-me</label> 
         <br>
-        <button type="button">Entrar</button>
+        <button type="submit">Entrar</button>
         </form>
         <a href="http://">Esqueci a senha</a>
     </aside>
