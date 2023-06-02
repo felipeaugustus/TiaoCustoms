@@ -40,10 +40,34 @@ nav {
     color: var(--branco);
     font-size: 28px;
     font-weight: 400;
-    padding-bottom: 2.2vh;
+    /* padding-bottom: 2.2vh; */
+    /* padding-bottom: 2.2vh; */
     border-bottom: 3px solid var(--branco);
 }
-
+ #cad {
+    padding-bottom: 2.2vh;
+    margin-top: 17px;
+}
+#ser {
+    padding-bottom: 2.2vh;
+    margin-top: 17px;
+} 
+#ESTOQUE {
+   
+    margin-top: 17px;
+}
+ #cad {
+    padding-bottom: 2.2vh;
+    margin-top: 17px;
+}
+#ser {
+    padding-bottom: 2.2vh;
+    margin-top: 17px;
+} 
+#ESTOQUE {
+   
+    margin-top: 17px;
+}
 .header a:hover {
     color: var(--branco) !important;
 }
@@ -154,19 +178,60 @@ table tbody tr:last-child td {
 }
 
 
-/* Footer */
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    padding: 5px;
 }
 
+
+.submenu-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-content li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+}
+
+
+.submenu-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-content li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
 
 
 
@@ -190,6 +255,46 @@ footer {
     border-radius: 50%;
 }
 
+/* Footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pagina de login */
 
 aside {
     background-color: var(--azul-escuro);
@@ -272,7 +377,7 @@ figure img {
 }
 
 .mdc-card {
-    scale: 20%;
+    scale: 100%;
 }
 
 
