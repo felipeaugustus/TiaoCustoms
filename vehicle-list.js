@@ -36,7 +36,6 @@ class Service {
                 return false;
             }
         } else {
-            deleteService(this.getPlate());
             localStorage.setItem(this.getPlate(), JSON.stringify(this));
             alert("Serviço cadastrado com êxito");
             return true;
