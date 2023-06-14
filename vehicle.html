@@ -50,18 +50,25 @@
     </div>
     <article class="conteiner">
         <div class="box">
-            <form action="" method="get">
+            <form class="form-service" action="" method="get">
                 <h2>Veículo</h2>
-                <input type="text" name="marca" id="marca" placeholder="Marca" autofocus required><br>
-                <input type="text" name="modelo" id="modelo" placeholder="Modelo" autofocus required><br>
-                <input type="text" name="placa" id="placa" placeholder="Placa" autofocus required>
-                <input type="number" name="ano" id="ano" placeholder="Ano" min="1900" max="2023" required><br>
+                <input name="marca" id="marca" autocomplete="off" required>
+                <label for="marca"><span class="span-label">Marca</span></label>
+                <input type="text" name="modelo" id="modelo" autocomplete="off" required>
+                <label for="modelo"><span class="span-label">Modelo</span></label>
+                <input type="text" name="cliente" id="cliente" autocomplete="off" required>
+                <label for="cliente"><span class="span-label">Cliente</span></label>
+                <input type="text" name="placa" id="placa" autocomplete="off" required>
+                <label for="placa"><span class="span-label">Placa</span></label>
+                <input type="number" name="ano" id="ano" min="1900" max="2023" autocomplete="off" required>
+                <label for="ano" id="label-ano"><span class="span-label">Ano</span></label>
                 <h2>Serviço</h2>
-                <input type="date" name="dtEntrada" id="dtEntrada" placeholder="Data de Entrada" required>
-                <input type="text" name="orcamento" id="orcamento" placeholder="orçamento" required><br>
-                <label for="servicos">Tipo de serviço</label>
+                <input type="date" name="dtEntrada" id="dtEntrada" required>
+                <input type="text" name="orcamento" id="orcamento" autocomplete="off" required>
+                <label for="orcamento" id="label-orcamento"><span class="span-label">Orçamento</span></label>
+                <label class="label-service" for="servicos">Tipo de serviço</label>
                 <select name="servicos" id="servicos" required>
-                    <option value="Eletrica">Eletrica</option>
+                    <option value="Eletrica">Elétrica</option>
                     <option value="Mecanica">Mecânica</option>
                     <option value="Latoaria">Latoaria</option>
                     <option value="Pintura">Pintura</option>
@@ -69,7 +76,8 @@
                     <option value="Suspensao">Suspensão</option>
                     <option value="Revisao">Revisão</option>
                 </select><br>
-                <textarea name="dsServico" id="dsServico" cols="30" rows="10">Descrição do Serviço</textarea><br>
+                <label id="label-descricao" for="descricao">Descrição do Serviço</label>
+                <input type="text" name="descricao" id="descricao" placeholder="Descricao">
                 <div class="button-register-reset">
                     <input type="reset" value="LIMPAR">
                     <button type="button" value="">CADASTRAR</button>

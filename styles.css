@@ -382,24 +382,16 @@ figure img {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .box {
     z-index: 1;
-    width: 40%;
-    height: 70%;
+    width: 30%;
     background-color: rgba(202, 202, 202, 0.8);
     border-radius: 30px;
     padding: 20px;
     opacity: 1.0;
-    border-radius: 35px;
-    width: 35vw;
-    height: 72vh;
-    margin-bottom: 3.5vh;
-    margin-top: 4vh;
-    background-color: rgba(202, 202, 202, 0.8);
-    margin-left: 7vw;
-    margin-right: 7vw;
 }
 
 .box h2 {
@@ -408,29 +400,86 @@ figure img {
     font-size: 32px;
 }
 
+.form-service {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.form-service input {
+    font-size: 20px;
+    width: 100%;
+    padding: 20px 5px 5px;
+    background-color: var(--branco);
+    border: none;
+}
+
+.form-service label {
+    position: absolute;
+    left: 11px;
+    width: 100%;
+    height: 86%;
+    pointer-events: none;
+}
+
+.form-service label::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.span-label {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#label-ano {
+    margin-left: 218px;
+}
+
+#label-orcamento {
+    margin-left: 205px;
+}
+
+
+.form-service input:focus+label .span-label,
+.form-service input:valid+label .span-label {
+    transform: translateY(-150%);
+    font-size: 10px;
+    margin-top: 18px;
+}
+
+.form-service input:focus+label::after,
+.form-service input:valid+label::after {
+    transform: translateX(0%);
+}
+
 #marca,
 #modelo,
+#cliente,
 #placa,
 #ano,
 #dtEntrada,
 #orcamento,
+#descricao,
 select,
 textarea {
     width: 94%;
     margin-left: 10px;
-    padding-top: 5px;
-    padding-right: 2px;
-    padding-bottom: 5px;
-    padding-left: 5px;
+    padding: 2px;
     border: none;
     margin-bottom: 10px;
-
 }
 
-label {
-    font-weight: normal;
-    margin-top: 10px;
-    margin-left: 10px;
+.label-service {
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 1px;
 }
 
 #placa {
@@ -439,7 +488,7 @@ label {
 }
 
 #ano {
-    width: 42%;
+    width: 41%;
     margin-left: 16px;
 }
 
@@ -448,20 +497,34 @@ label {
 }
 
 #orcamento {
-    width: 44%;
+    width: 43%;
     margin-left: 5px;
+}
+
+select {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#label-descricao {
+    font-weight: bold;
+}
+
+#descricao {
+    margin-top: 25px;
+    margin-left: 9px;
 }
 
 .button-register-reset {
     float: right;
     display: flex;
     margin-top: 20px;
+    justify-content: flex-end;
 }
 
 .button-register-reset input[type="reset"],
 .button-register-reset button[type="button"] {
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     background-color: transparent;
     font-weight: bold;
@@ -471,6 +534,7 @@ label {
 }
 
 .button-register-reset input[type="reset"] {
+    margin-top: -12px;
     margin-right: 40px;
 }
 
