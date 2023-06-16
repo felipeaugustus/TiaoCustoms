@@ -3,15 +3,80 @@ const regexMercosul = /^[A-Z]{3}\d[A-Z0-9]\d{2}$/;
 
 class Service {
     constructor(brand, model, plate, year, date, budget, serviceType, description, client) {
-        this.brand = brand;
-        this.model = model;
-        this.plate = this.setPlate(plate);
-        this.year = year;
-        this.date = date;
-        this.budget = budget;
-        this.serviceType = serviceType;
-        this.description = description;
-        this.client = client;
+        this.setBrand(brand);
+        this.setModel(model);
+        this.setPlate(plate);
+        this.setYear(year);
+        this.setDate(date);
+        this.setBudget(budget);
+        this.setServiceType(serviceType);
+        this.setDescription(description);
+        this.setClient(client);
+        console.log(this);
+    }
+
+    setBrand(brand) {
+        if (brand.length > 0) {
+            this.brand = brand;
+        } else {
+            throw new Error("Marca não pode ser vazia")
+        }
+    }
+
+    setModel(model) {
+        if (model.length > 0) {
+            this.model = model;
+        } else {
+            throw new Error("Modelo não pode ser vazio")
+        }
+    }
+
+    setYear(year) {
+        if (year.toString().length < 4 || year.toString().length > 4) {
+            throw new Error("Ano com formatação inválida")
+        } else {
+            this.year = year;
+        }
+    }
+
+    setDate(date) {
+        if (date != "undefined/undefined/") {
+            this.date = date;
+        } else {
+            throw new Error("Data não pode ser vazia")
+        }
+    }
+
+    setBudget(budget) {
+        if (!isNaN(budget)) {
+            this.budget = budget;
+        } else {
+            throw new Error("Orçamento inválido")
+        }
+    }
+
+    setServiceType(serviceType) {
+        if (serviceType.length > 0) {
+            this.serviceType = serviceType;
+        } else {
+            throw new Error("Tipo de serviço inválido")
+        }
+    }
+
+    setDescription(description) {
+        if (description.length > 0) {
+            this.description = description;
+        } else {
+            throw new Error("Descrição não pode ser vazia")
+        }
+    }
+
+    setClient(client) {
+        // if (client.length > 0) {
+        //     this.client = client;
+        // } else {
+        //     throw new Error("Cliente não pode ser vazio")
+        // }
     }
 
     getPlate() {
@@ -20,7 +85,7 @@ class Service {
 
     setPlate(plate) {
         if (plateIsValid(plate)) {
-            return plate;
+            this.plate = plate;
         } else {
             throw new Error("Placa com formatação inválida");
         }
@@ -107,6 +172,11 @@ function populateTable() {
         serviceTypeCell.textContent = JSON.parse(services[index]).serviceType;
         row.appendChild(serviceTypeCell);
 
+        var btnDelete = document.createElement("td");
+        btnDelete.classList.add("material-symbols-outlined", "pointer", "delete-button")
+        btnDelete.textContent = "delete";
+        row.appendChild(btnDelete);
+
         tableBody.appendChild(row);
     }
 }
@@ -118,9 +188,27 @@ if (sessionStorage.getItem("logged") !== "true") {
 document.addEventListener("DOMContentLoaded", function () { // sera executado quando pagina carregar
     populateTable();
 
+    var deleteButtons = document.querySelectorAll("td.delete-button");
+    deleteButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const row = button.parentNode;
+            const model = row.cells[1].textContent;
+            const plate = row.cells[2].textContent;
+            console.log(plate);
+            if (confirm(`Você tem certeza que deseja deletar o serviço do carro ${model} placa ${plate}`)) {
+                deleteService(plate);
+                populateTable();
+            }
+        });
+    });
+
     const tableRows = document.querySelectorAll("table tbody tr");
     tableRows.forEach((row) => {
-        row.addEventListener("click", () => {
+        const plate = row.cells[2];
+        plate.classList.add("pointer");
+        plate.title = "Editar serviço"
+        plate.addEventListener("click", (event) => {
+            event.stopPropagation();
             const plate = row.cells[2].textContent;
             window.location.href = `vehicle.html?plate=${plate}`;
         });

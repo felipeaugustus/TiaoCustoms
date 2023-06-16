@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () { // sera executado qu
                 document.getElementById("servicos").value = "";
                 document.getElementById("dsServico").value = "";
             }
-            // falta cliente
+            //  falta cliente
         } catch (error) {
-            alert(`Erro ao cadastrar veículo: ${error}`);
+            alert(`Erro ao cadastrar veículo: ${error.message}`);
         }
     });
 
