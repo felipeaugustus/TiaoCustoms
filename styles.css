@@ -324,7 +324,7 @@ position: absolute;
 }
 
 .irmaosdacasa {
-    background-color:white;
+    background-color: var(--cinza);
 }
 
 
@@ -378,6 +378,23 @@ figure img {
     scale: 100%;
 }
 
+.who {
+    padding-left: 16px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.since {
+    padding-left: 16px;
+    font-size: 24px;
+}
+
+.lore {
+    font-size: 22px;
+    text-justify: inter-word;
+    text-align: justify;
+    padding: 16px;
+}
 
 
 
@@ -409,6 +426,7 @@ figure img {
     background-color: rgba(202, 202, 202, 0.8);
     border-radius: 30px;
     padding: 20px;
+    margin-top: 4.5vh;
     opacity: 1.0;
 }
 

@@ -118,11 +118,11 @@ function plateIsValid(plate) {
 }
 
 function getAllServices() {
-    var vetor = [];
-    for (var i = 0; i < localStorage.length; i++) {
-        var chave = localStorage.key(i);
+    let vetor = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        let chave = localStorage.key(i);
         if (regexCinza.test(chave) || regexMercosul.test(chave)) {
-            var value = localStorage.getItem(chave);
+            let value = localStorage.getItem(chave);
             vetor.push(value);
         }
     }
@@ -145,34 +145,34 @@ function populateTable() {
 
     tableBody.innerHTML = ""; // limpa tabela
     for (let index = 0; index < services.length; index++) {
-        var row = document.createElement("tr");
+        let row = document.createElement("tr");
 
-        var checkBox = document.createElement("td");
+        let checkBox = document.createElement("td");
         checkBox.classList.add("material-symbols-outlined")
         checkBox.textContent = "check_box_outline_blank";
         row.appendChild(checkBox);
 
-        var modelCell = document.createElement("td");
+        let modelCell = document.createElement("td");
         modelCell.textContent = JSON.parse(services[index]).model;
         row.appendChild(modelCell);
 
-        var plateCell = document.createElement("td");
+        let plateCell = document.createElement("td");
         plateCell.textContent = JSON.parse(services[index]).plate;
         row.appendChild(plateCell);
 
-        var clientCell = document.createElement("td");
+        let clientCell = document.createElement("td");
         clientCell.textContent = JSON.parse(services[index]).client;
         row.appendChild(clientCell);
 
-        var dateCell = document.createElement("td");
+        let dateCell = document.createElement("td");
         dateCell.textContent = JSON.parse(services[index]).date;
         row.appendChild(dateCell);
 
-        var serviceTypeCell = document.createElement("td");
+        let serviceTypeCell = document.createElement("td");
         serviceTypeCell.textContent = JSON.parse(services[index]).serviceType;
         row.appendChild(serviceTypeCell);
 
-        var btnDelete = document.createElement("td");
+        let btnDelete = document.createElement("td");
         btnDelete.classList.add("material-symbols-outlined", "pointer", "delete-button")
         btnDelete.textContent = "delete";
         row.appendChild(btnDelete);
@@ -188,7 +188,7 @@ if (sessionStorage.getItem("logged") !== "true") {
 document.addEventListener("DOMContentLoaded", function () { // sera executado quando pagina carregar
     populateTable();
 
-    var deleteButtons = document.querySelectorAll("td.delete-button");
+    let deleteButtons = document.querySelectorAll("td.delete-button");
     deleteButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             const row = button.parentNode;

@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () { // sera executado quando pagina carregar
     document.getElementById("login").addEventListener("submit", function (event) {
         event.preventDefault();
-        var username = document.getElementById("user").value;
-        var password = document.getElementById("password").value;
+        let username = document.getElementById("user").value;
+        let password = document.getElementById("password").value;
 
         if (username === "usuario" && password === "123456") {
             sessionStorage.setItem("logged", "true");
