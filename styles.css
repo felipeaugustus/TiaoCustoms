@@ -130,11 +130,18 @@ th {
     padding: 10px;
 }
 
+tbody tr:hover {
+    background-color: var(--cinza);
+}
+
 tfoot tr td {
     border-top: 1px solid;
     border-bottom: none;
 }
 
+.pointer {
+    cursor: pointer;
+}
 
 .table-footer {
     align-items: center;
