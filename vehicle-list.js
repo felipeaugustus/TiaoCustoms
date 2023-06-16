@@ -72,11 +72,11 @@ class Service {
     }
 
     setClient(client) {
-        // if (client.length > 0) {
-        //     this.client = client;
-        // } else {
-        //     throw new Error("Cliente não pode ser vazio")
-        // }
+        if (client.length > 0) {
+            this.client = client;
+        } else {
+            throw new Error("Cliente não pode ser vazio")
+        }
     }
 
     getPlate() {

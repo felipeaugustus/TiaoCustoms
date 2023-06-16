@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function () { // sera executado qu
         const ano = parseInt(document.getElementById("ano").value);
         const dtEntrada = document.getElementById("dtEntrada").value;
         const servicos = document.getElementById("servicos").value;
-        const dsServico = document.getElementById("dsServico").value;
+        const dsServico = document.getElementById("descricao").value;
         const orcamento = parseFloat(document.getElementById("orcamento").value);
-        // falta cliente
+        const cliente = document.getElementById("cliente").value;
 
         const parts = dtEntrada.split('-'); // formata padrao BR
         const dtEntradaFormat = `${parts[2]}/${parts[1]}/${parts[0]}`;
         try {
-            const service = new Service(marca, modelo, placa, ano, dtEntradaFormat, orcamento, servicos, dsServico);
+            const service = new Service(marca, modelo, placa, ano, dtEntradaFormat, orcamento, servicos, dsServico, cliente);
             if (service.upsert()) {
                 document.getElementById("marca").value = "";
                 document.getElementById("modelo").value = "";
@@ -29,11 +29,12 @@ document.addEventListener("DOMContentLoaded", function () { // sera executado qu
                 document.getElementById("dtEntrada").value = "";
                 document.getElementById("orcamento").value = "";
                 document.getElementById("servicos").value = "";
-                document.getElementById("dsServico").value = "";
+                document.getElementById("descricao").value = "";
+                document.getElementById("cliente").value = "";
             }
-            //  falta cliente
         } catch (error) {
-            alert(`Erro ao cadastrar veículo: ${error.message}`);
+            alert(`Erro ao cadastrar veículo: ${error.message}`); 7
+            console.error(error)
         }
     });
 
@@ -46,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () { // sera executado qu
         document.getElementById("ano").value = vehicle.year;
         document.getElementById("orcamento").value = vehicle.budget;
         document.getElementById("servicos").value = vehicle.serviceType;
-        document.getElementById("dsServico").value = vehicle.description;
-        // falta cliente
+        document.getElementById("descricao").value = vehicle.description;
+        document.getElementById("cliente").value = vehicle.client;
 
         vehicle.date = vehicle.date.split('/'); // formata padrao US
         var day = vehicle.date[0];
