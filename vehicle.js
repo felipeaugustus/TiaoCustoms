@@ -51,9 +51,9 @@ document.addEventListener("DOMContentLoaded", function () { // sera executado qu
         document.getElementById("cliente").value = vehicle.client;
 
         vehicle.date = vehicle.date.split('/'); // formata padrao US
-        var day = vehicle.date[0];
-        var month = vehicle.date[1];
-        var year = vehicle.date[2];
+        let day = vehicle.date[0];
+        let month = vehicle.date[1];
+        let year = vehicle.date[2];
         vehicle.date = year + '-' + month + '-' + day;
         document.getElementById("dtEntrada").value = vehicle.date;
     }
